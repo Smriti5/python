@@ -1,0 +1,16 @@
+#!/usr/bin/python3
+import sys
+x=10
+y=2.5
+z='hello'
+print(type(x))
+print("Size of x is :")
+print(sys.getsizeof(x))
+
+print(type(y))
+print("Size of y is :")
+print(sys.getsizeof(y))
+
+print(type(z))
+print("Size of z is :")
+print(sys.getsizeof(z))
