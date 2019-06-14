@@ -32,7 +32,7 @@ elif choice == '3' :
 elif choice == '4' :
         fi=open('a.txt','r')
         data=fi.read()
-        splt=data.split('\n')
+        splt=data.split(',')
         for i in splt:
                 f=open(i,'w') #it is making multiple files but showing error too
 
