@@ -7,6 +7,9 @@ response.text
 soup=BeautifulSoup(response.text,"lxml")
 soup
 for Alink in soup.find_all('a'):#a tag or anchor tag consist all urls and is passed in find_all
-  #print(Alink)
-  #for ahref in Alink.find_all('href')  --> ye isliye nhi chalaya kyunki ye chalate to Alink href ko new link maanta jbki href to a tag k andar h
+  print(Alink)
   print(Alink.get('href'))
+for ptag in soup.find_all('p'):
+  print(ptag)
+  for btag in soup.find_all('b'):
+    print(btag.text)
