@@ -1,0 +1,12 @@
+from bs4 import BeautifulSoup
+url='https://en.wikipedia.org/wiki/Doraemon'
+response=requests.get(url)   #to send request to url and get response
+response
+response.text
+#parsing library- html.parser and second is lxml
+soup=BeautifulSoup(response.text,"lxml")
+soup
+for Alink in soup.find_all('a'):#a tag or anchor tag consist all urls and is passed in find_all
+  #print(Alink)
+  #for ahref in Alink.find_all('href')  --> ye isliye nhi chalaya kyunki ye chalate to Alink href ko new link maanta jbki href to a tag k andar h
+  print(Alink.get('href'))
