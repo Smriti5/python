@@ -1,0 +1,16 @@
+import os
+import folium
+import json
+tooltip='Click for more info'
+vis=os.path.join('new1.json')
+m=folium.Map(location=[26.924812,75.8245935],zoom_start=60)
+folium.Marker(
+    [26.924550,75.824877],
+    popup='<strong>Location One</strong>',
+    tooltip=tooltip
+).add_to(m),
+folium.Marker(
+    [26.924999,75.824606],
+    popup=folium.Popup(max_width=420).add_child(folium.Vega(json.load(open(vis))))
+).add_to(m),
+m #for google colab
